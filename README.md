@@ -12,7 +12,7 @@ Projeto simples em Python usando o framework Flask. Permite ao usuário preenche
 ## 📦 Instalação
 
 ```bash
-git clone [https://github.com/seuusuario/gerador_curriculo_flask.git](https://github.com/JaqueNakayama/APO.git)
+git clone https://github.com/JaqueNakayama/APO.git
 cd gerador_curriculo_flask
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
