@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Currículo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Currículo</h1>
+    <form action="/resultado" method="post">
+      <label>Nome:</label>
+      <input type="text" name="nome" required>
+
+      <label>Data de Nascimento:</label>
+      <input type="date" name="data_nascimento" required>
+
+      <label>Sobre Mim:</label>
+      <textarea name="sobre_mim" rows="3" required></textarea>
+
+      <label>Habilidades (separadas por vírgula):</label>
+      <input type="text" name="habilidades" required>
+
+      <label>Experiências Profissionais:</label>
+      <div id="experiencias">
+        <input type="text" name="experiencia[]" required>
+      </div>
+      <button type="button" onclick="addExperiencia()">+ Adicionar Experiência</button><br><br>
+
+      <button type="submit">Gerar Currículo</button>
+    </form>
+  </div>
+
+  <script>
+    function addExperiencia() {
+      const div = document.createElement("div");
+      div.innerHTML = '<input type="text" name="experiencia[]" required>';
+      document.getElementById("experiencias").appendChild(div);
+    }
+  </script>
+</body>
+</html>

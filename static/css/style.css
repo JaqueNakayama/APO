@@ -1,0 +1,42 @@
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: black;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}

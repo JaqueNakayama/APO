@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículo Gerado</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Currículo de <span>{{ nome }}</span></h1>
+    <p><u><strong>Data de Nascimento:</strong></u> {{ data_nascimento }}</p>
+    <p><u><strong>Idade:</strong></u> {{ idade }} anos</p>
+
+    <h2><u><strong>Sobre Mim</strong></u></h2>
+    <p>{{ sobre_mim }}</p>
+
+    <h2><u><strong>Habilidades</strong></u></h2>
+    <ul>
+      {% for habilidade in habilidades %}
+        <li>{{ habilidade }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2><u><strong>Experiências Profissionais</strong></u></h2>
+    <ul>
+      {% for exp in experiencias %}
+        <li>{{ exp }}</li>
+      {% endfor %}
+    </ul>
+
+    <button onclick="window.print()">Imprimir Currículo</button>
+  </div>
+</body>
+</html>
